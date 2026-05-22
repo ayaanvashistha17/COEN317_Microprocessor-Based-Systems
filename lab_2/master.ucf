@@ -1,0 +1,50 @@
+# UCF for USER IO
+# Compiled from the  ug850-zc702-eval-bd.pdf 
+# Appendix C
+# T. Obuchowicz
+# Oct. 23, 2024
+# Include only the inputs/outputs needed in your design!
+# delete or comment out any other lines
+# change the net names to reflect the names in your design
+# Including the IOSTANDARD in the .ucf file will remove
+# the  "unconstrained pins or IOSTANDARD" error generated during the bitgen process and it will
+# no longer be necessary to specify the -g UnconstrainedPins:Allow
+# Option within the Bitgen Settings. 
+
+# User Pushbutton switches
+# SW5 = GPIO_SW_N (Left switch)
+# SW7 = GPIO_SW_S (Right switch)
+NET GPIO_SW_N LOC = G19 | IOSTANDARD=LVCMOS25; 
+NET GPIO_SW_S LOC = F19 | IOSTANDARD=LVCMOS25; 
+
+
+# User DIP switch SW12
+NET GPIO_DIP_SW1 LOC = W7 | IOSTANDARD=LVCMOS25;   # pin 1 of SW12
+NET GPIO_DIP_SW0 LOC = W6 | IOSTANDARD=LVCMOS25;   # pin 2 of SW12
+
+#  8 PL (programmable logic )USER LEDS  
+#  change the net names to reflect names
+#  in your design
+
+NET LED19  IOSTANDARD=LVCMOS25 |  LOC = E15; 
+NET LED20  IOSTANDARD=LVCMOS25 |  LOC = D15; 
+NET LED21  IOSTANDARD=LVCMOS25 |  LOC = W17; 
+NET LED22  IOSTANDARD=LVCMOS25 |  LOC = W5; 
+NET LED18  IOSTANDARD=LVCMOS25 |  LOC = V7; 
+NET LED17  IOSTANDARD=LVCMOS25 |  LOC = W10;  
+NET LED16  IOSTANDARD=LVCMOS25 |  LOC = P18;
+NET LED15  IOSTANDARD=LVCMOS25 |  LOC = P17; 
+
+# 2 PS (processing system)  User LEDS
+# Note: the master UCF listing on page 70 does
+# NOT specify any IOSTANDARD for these two nets
+# so none was specified here
+# We do not use these LEDS in any of the labs
+# they are included here (but commented out)
+# for sake of completeness
+
+#NET LED23   LOC = G7;
+#NET LED12   LOC = E5;
+
+
+

@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=/nfs/home/a/ay_vashi/COEN_317/lab_3/lab_3_plan_ahead_part_3/lab_3_plan_ahead_part_3.runs/impl_1/system_2_stub_routed.ncd
+OUTFILE=/nfs/home/a/ay_vashi/COEN_317/lab_3/lab_3_plan_ahead_part_3/lab_3_plan_ahead_part_3.runs/impl_1/system_2_stub.bit
+FAMILY=Zynq
+PART=xc7z020-1clg484
+WORKINGDIR=/nfs/home/a/ay_vashi/COEN_317/lab_3/lab_3_plan_ahead_part_3/lab_3_plan_ahead_part_3.runs/impl_1
+LICENSE=ISE
+USER_INFO=174208431_1777582641_210797993_828

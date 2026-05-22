@@ -1,0 +1,20 @@
+15:31:50.829 INFO  - Processing command line option -hwspec /nfs/home/a/ay_vashi/COEN_317/lab_2/lab2/lab2.sdk/SDK/SDK_Export/hw/system.xml. 
+15:36:43.610 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:36:43.710 INFO  - PS initialization will be done as it is not done before. 
+15:36:43.711 INFO  - Running PS initialization.... 
+15:36:44.143 INFO  - ps7_init is completed. 
+15:36:44.244 INFO  - ps7_post_config is completed. 
+15:36:44.344 INFO  - PS Initialization is complete. 
+15:42:41.758 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:42:49.698 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:42:50.103 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Invalid Target ID
+    Target '64' Does NOT exist in the Current System
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+15:43:23.604 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:44:12.918 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:44:37.145 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:50:38.828 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

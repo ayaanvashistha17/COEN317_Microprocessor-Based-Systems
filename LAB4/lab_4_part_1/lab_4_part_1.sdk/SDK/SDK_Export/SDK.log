@@ -1,0 +1,14 @@
+15:15:21.251 INFO  - Processing command line option -hwspec /nfs/home/a/ay_vashi/COEN_317/LAB4/lab_4_part_1/lab_4_part_1.sdk/SDK/SDK_Export/hw/system.xml. 
+15:29:16.885 INFO  - Processing command line option -hwspec /nfs/home/a/ay_vashi/COEN_317/LAB4/lab_4_part_1/lab_4_part_1.sdk/SDK/SDK_Export/hw/system_part_1.xml. 
+15:29:17.969 INFO  - The hardware specification for project 'system_hw_platform' is different from /nfs/home/a/ay_vashi/COEN_317/LAB4/lab_4_part_1/lab_4_part_1.sdk/SDK/SDK_Export/hw/system_part_1.xml. 
+15:29:18.131 INFO  - Copied contents of /nfs/home/a/ay_vashi/COEN_317/LAB4/lab_4_part_1/lab_4_part_1.sdk/SDK/SDK_Export/hw/system_part_1.xml into /system_hw_platform/system.xml. 
+15:29:18.238 INFO  - Copied contents of /nfs/home/a/ay_vashi/COEN_317/LAB4/lab_4_part_1/lab_4_part_1.sdk/SDK/SDK_Export/hw/ps7_init.c into /system_hw_platform/ps7_init.c. 
+15:29:18.246 INFO  - Copied contents of /nfs/home/a/ay_vashi/COEN_317/LAB4/lab_4_part_1/lab_4_part_1.sdk/SDK/SDK_Export/hw/ps7_init.h into /system_hw_platform/ps7_init.h. 
+15:29:18.389 INFO  - Copied contents of /nfs/home/a/ay_vashi/COEN_317/LAB4/lab_4_part_1/lab_4_part_1.sdk/SDK/SDK_Export/hw/ps7_init.html into /system_hw_platform/ps7_init.html. 
+15:29:18.446 INFO  - Copied contents of /nfs/home/a/ay_vashi/COEN_317/LAB4/lab_4_part_1/lab_4_part_1.sdk/SDK/SDK_Export/hw/ps7_init.tcl into /system_hw_platform/ps7_init.tcl. 
+15:29:18.667 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+15:29:28.246 ERROR - Error updating hardware inferred compiler settings. 
+15:29:28.246 INFO  - Clearing existing target manager status. 
+15:35:26.475 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:37:21.537 INFO  - Processing command line option -hwspec /nfs/home/a/ay_vashi/COEN_317/LAB4/lab_4_part_1/lab_4_part_1.sdk/SDK/SDK_Export/hw/system_part_1.xml. 
+15:45:48.163 INFO  - Processing command line option -hwspec /nfs/home/a/ay_vashi/COEN_317/LAB4/lab_4_part_1/lab_4_part_1.sdk/SDK/SDK_Export/hw/system_part_1.xml. 

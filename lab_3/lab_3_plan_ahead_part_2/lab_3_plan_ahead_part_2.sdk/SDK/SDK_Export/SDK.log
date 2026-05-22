@@ -1,0 +1,28 @@
+17:09:18.521 INFO  - Processing command line option -hwspec /nfs/home/a/ay_vashi/COEN_317/lab_3/lab_3_plan_ahead_part_2/lab_3_plan_ahead_part_2.sdk/SDK/SDK_Export/hw/system_2_part_2_final.xml. 
+17:10:49.554 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+17:11:29.484 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+17:11:29.484 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+17:13:40.248 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:24:08.340 INFO  - Processing command line option -hwspec /nfs/home/a/ay_vashi/COEN_317/lab_3/lab_3_plan_ahead_part_2/lab_3_plan_ahead_part_2.sdk/SDK/SDK_Export/hw/system_2_part_2_final.xml. 
+17:24:53.439 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:24:53.540 INFO  - PS initialization will be done as it is not done before. 
+17:24:53.540 INFO  - Running PS initialization.... 
+17:24:53.954 INFO  - ps7_init is completed. 
+17:24:54.054 INFO  - ps7_post_config is completed. 
+17:24:54.154 INFO  - PS Initialization is complete. 
+17:29:11.982 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

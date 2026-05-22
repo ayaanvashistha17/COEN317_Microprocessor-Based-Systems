@@ -1,0 +1,51 @@
+#include "xparameters.h"
+#include "xil_types.h"
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    u32* Timer_Ptr = (u32*) XPAR_TMRCTR_0_BASEADDR;
+    u32 capture_value;
+    u32 new_capture_value;
+
+    cout << "Part 2: Capture Mode" << endl;
+    cout << "Press SW5 for first capture..." << endl;
+
+    // Capture mode with overwrite enabled
+    Timer_Ptr[0] = 0x19;
+
+    // Load 0 into TLR0
+    Timer_Ptr[1] = 0;
+
+    // Load TLR0 into TCR0
+    Timer_Ptr[0] |= (1 << 5);
+
+    // Clear load bit so timer can run
+    Timer_Ptr[0] &= ~(1 << 5);
+
+    // Enable timer
+    Timer_Ptr[0] |= (1 << 7);
+
+    // Wait for first capture
+    while (Timer_Ptr[1] == 0)
+    {
+    }
+
+    capture_value = Timer_Ptr[1];
+    cout << "First captured value = " << capture_value << endl;
+    cout << "Press SW5 again for second capture..." << endl;
+
+    // Wait for second capture
+    while (Timer_Ptr[1] == capture_value)
+    {
+    }
+
+    new_capture_value = Timer_Ptr[1];
+
+    cout << "Second captured value = " << new_capture_value << endl;
+    cout << "Difference = " << (new_capture_value - capture_value) << " clock cycles" << endl;
+
+    return 0;
+}

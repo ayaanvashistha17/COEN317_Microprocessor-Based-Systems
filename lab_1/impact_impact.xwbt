@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/nfs/home/a/ay_vashi/COEN_317/lab_1/impact.xsl
+OUTFILE=/nfs/home/a/ay_vashi/COEN_317/lab_1/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/nfs/home/a/ay_vashi/COEN_317/lab_1
+LICENSE=iMPACT
+USER_INFO=iMPACT

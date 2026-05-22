@@ -1,0 +1,125 @@
+18:32:07 **** Build of project quiz_practice_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+       \
+       -pe ps7_cortexa9_0 \
+       -log libgen.log \
+       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'gmake -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'gmake -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+Compiling common
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+Compiling standalone
+Compiling gpio
+Compiling tmrctr
+Compiling canps
+Compiling devcfg
+Compiling dmaps
+Compiling emacps
+Compiling gpiops
+Compiling iicps
+Compiling qspips
+Compiling scugic
+Compiling scutimer
+Compiling scuwdt
+Compiling ttcps
+Compiling uartps
+Compiling usbps
+Compiling wdtps
+Compiling xadcps
+Compiling cpu_cortexa9
+Running execs_generate.
+Finished building libraries
+18:32:46 **** Build of configuration Debug for project quiz_practice ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../quiz_practice_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: quiz_practice.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../quiz_practice_bsp/ps7_cortexa9_0/lib -o "quiz_practice.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: quiz_practice.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size quiz_practice.elf  |tee "quiz_practice.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 468740	   2556	  38888	 510184	  7c8e8	quiz_practice.elf
+Finished building: quiz_practice.elf.size
+ 
+18:33:24 **** Incremental Build of configuration Debug for project quiz_practice ****
+make all 
+make: Nothing to be done for 'all'.
+18:38:52 **** Auto Build of configuration Debug for project quiz_practice ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../quiz_practice_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:68:13: warning: variable 'led_value' set but not used [-Wunused-but-set-variable]
+Finished building: ../src/main.cc
+ 
+Building target: quiz_practice.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../quiz_practice_bsp/ps7_cortexa9_0/lib -o "quiz_practice.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: quiz_practice.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size quiz_practice.elf  |tee "quiz_practice.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 468796	   2556	  38888	 510240	  7c920	quiz_practice.elf
+Finished building: quiz_practice.elf.size
+ 
+18:38:59 **** Incremental Build of configuration Debug for project quiz_practice ****
+make all 
+make: Nothing to be done for 'all'.
+18:39:11 **** Incremental Build of configuration Debug for project quiz_practice ****
+make all 
+make: Nothing to be done for 'all'.
+18:40:04 **** Auto Build of configuration Debug for project quiz_practice ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../quiz_practice_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:68:13: warning: variable 'led_value' set but not used [-Wunused-but-set-variable]
+Finished building: ../src/main.cc
+ 
+Building target: quiz_practice.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../quiz_practice_bsp/ps7_cortexa9_0/lib -o "quiz_practice.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: quiz_practice.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size quiz_practice.elf  |tee "quiz_practice.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 468796	   2556	  38888	 510240	  7c920	quiz_practice.elf
+Finished building: quiz_practice.elf.size
+ 
+18:40:10 **** Incremental Build of configuration Debug for project quiz_practice ****
+make all 
+make: Nothing to be done for 'all'.
+18:40:40 **** Incremental Build of configuration Debug for project quiz_practice ****
+make all 
+make: Nothing to be done for 'all'.
+18:42:31 **** Incremental Build of configuration Debug for project quiz_practice ****
+make all 
+make: Nothing to be done for 'all'.

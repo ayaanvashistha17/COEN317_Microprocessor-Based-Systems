@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="NetListWriters" num="298" delta="new" >No output is written to <arg fmt="%s" index="1">system_2_part_2_final_axi_interconnect_1_wrapper.xncf</arg>, ignored.
+</msg>
+
+<msg type="warning" file="NetListWriters" num="306" delta="new" >Signal bus <arg fmt="%s" index="1">axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i</arg><arg fmt="%s" index="2">&lt;65 : 0&gt;</arg> on block <arg fmt="%s" index="3">system_2_part_2_final_axi_interconnect_1_wrapper</arg> is not reconstructed, because there are some missing bus signals.
+</msg>
+
+<msg type="warning" file="NetListWriters" num="306" delta="new" >Signal bus <arg fmt="%s" index="1">axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/s_amesg</arg><arg fmt="%s" index="2">&lt;65 : 0&gt;</arg> on block <arg fmt="%s" index="3">system_2_part_2_final_axi_interconnect_1_wrapper</arg> is not reconstructed, because there are some missing bus signals.
+</msg>
+
+</messages>
+

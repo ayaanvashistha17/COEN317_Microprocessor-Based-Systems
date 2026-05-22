@@ -1,0 +1,16 @@
+
+Nov. 17, 2022:
+
+Peter Granitski discovered a typo in Lab 5:
+
+"In the lab manual for lab 5 at step 5.16 it states
+"and then right click the blue portion" but it should state "and then *left*
+click the blue portion".
+
+
+
+October 31, 2023:
+
+The typo for step 5.16 has been corrected in the new Lab 4 Part 2 handout.
+
+

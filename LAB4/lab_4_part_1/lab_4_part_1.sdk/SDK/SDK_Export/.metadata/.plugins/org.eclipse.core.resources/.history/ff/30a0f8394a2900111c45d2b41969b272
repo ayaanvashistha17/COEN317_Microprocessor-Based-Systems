@@ -1,0 +1,227 @@
+#include <iostream>
+using namespace std;
+
+#include "xparameters.h"
+#include "xil_types.h"
+#include "xil_exception.h"
+#include "xscugic.h"
+//#include "xtmrctr.h"
+
+/*
+ * ============================================================
+ * COEN 317 - Lab 4 Part 1
+ * Final version for:
+ * - AXI Timer interrupt
+ * - both internal counters checked in the ISR
+ * - shared interrupt line
+ * - terminal output showing timer events
+ * ============================================================
+ *
+ * IMPORTANT:
+ * This code assumes your AXI Timer clock is 100 MHz.
+ * If your design uses 50 MHz, change TIMER_CLOCK_HZ to 50000000.
+ */
+
+#define TIMER_CLOCK_HZ 100000000U
+
+// ---------- AXI Timer register map (u32 pointer indexing) ----------
+#define TCSR0_INDEX 0
+#define TLR0_INDEX  1
+#define TCR0_INDEX  2
+
+#define TCSR1_INDEX 4
+#define TLR1_INDEX  5
+#define TCR1_INDEX  6
+
+// ---------- TCSR bit masks ----------
+#define XTC_CSR_MDT_MASK   (1U << 0)   // 0 = generate mode
+#define XTC_CSR_UDT_MASK   (1U << 1)   // 1 = down count
+#define XTC_CSR_GENT_MASK  (1U << 2)
+#define XTC_CSR_CAPT_MASK  (1U << 3)
+#define XTC_CSR_ARHT_MASK  (1U << 4)   // auto reload
+#define XTC_CSR_LOAD_MASK  (1U << 5)   // load TLR into counter
+#define XTC_CSR_ENIT_MASK  (1U << 6)   // enable interrupt
+#define XTC_CSR_ENT_MASK   (1U << 7)   // enable timer
+#define XTC_CSR_TINT_MASK  (1U << 8)   // interrupt occurred
+
+// ---------- Global interrupt controller ----------
+XScuGic InterruptController;
+static XScuGic_Config *GicConfig;
+
+// ---------- Optional timer driver instance ----------
+XTmrCtr TimerInstancePtr;
+
+// We use Timer 0 as the 1-second reference
+volatile unsigned int g_seconds = 0;
+
+// ------------------------------------------------------------
+// Interrupt Service Routine
+// ------------------------------------------------------------
+void Timer_ISR(void *CallbackRef)
+{
+    volatile u32 *ptr = (u32 *)XPAR_AXI_TIMER_0_BASEADDR;
+
+    u32 tcsr0 = ptr[TCSR0_INDEX];
+    u32 tcsr1 = ptr[TCSR1_INDEX];
+
+    // Check Timer 0 interrupt flag (bit 8)
+    if (tcsr0 & XTC_CSR_TINT_MASK)
+    {
+        g_seconds++;
+        cout << "t = " << g_seconds << "s : Timer 0 interrupt" << endl;
+
+        // Clear Timer 0 interrupt by writing 1 to bit 8
+        ptr[TCSR0_INDEX] = tcsr0 | XTC_CSR_TINT_MASK;
+    }
+
+    // Check Timer 1 interrupt flag (bit 8)
+    if (tcsr1 & XTC_CSR_TINT_MASK)
+    {
+        cout << "t = " << g_seconds << "s : Timer 1 interrupt" << endl;
+
+        // Clear Timer 1 interrupt by writing 1 to bit 8
+        ptr[TCSR1_INDEX] = tcsr1 | XTC_CSR_TINT_MASK;
+    }
+}
+
+// ------------------------------------------------------------
+// Setup ARM exception handling
+// ------------------------------------------------------------
+int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr)
+{
+    Xil_ExceptionRegisterHandler(
+        XIL_EXCEPTION_ID_INT,
+        (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+        XScuGicInstancePtr
+    );
+
+    Xil_ExceptionEnable();
+    return XST_SUCCESS;
+}
+
+// ------------------------------------------------------------
+// Setup SCUGIC and connect AXI Timer interrupt
+// ------------------------------------------------------------
+int ScuGicInterrupt_Init(u16 DeviceId)
+{
+    int Status;
+
+    GicConfig = XScuGic_LookupConfig(DeviceId);
+    if (GicConfig == NULL)
+    {
+        return XST_FAILURE;
+    }
+
+    Status = XScuGic_CfgInitialize(
+        &InterruptController,
+        GicConfig,
+        GicConfig->CpuBaseAddress
+    );
+    if (Status != XST_SUCCESS)
+    {
+        return XST_FAILURE;
+    }
+
+    Status = SetUpInterruptSystem(&InterruptController);
+    if (Status != XST_SUCCESS)
+    {
+        return XST_FAILURE;
+    }
+
+    Status = XScuGic_Connect(
+        &InterruptController,
+        XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR,
+        (Xil_ExceptionHandler)Timer_ISR,
+        NULL
+    );
+    if (Status != XST_SUCCESS)
+    {
+        return XST_FAILURE;
+    }
+
+    XScuGic_Enable(&InterruptController, XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR);
+
+    return XST_SUCCESS;
+}
+
+// ------------------------------------------------------------
+// Configure both counters inside AXI Timer
+// Timer 0: 1 second period
+// Timer 1: 2 second period
+// ------------------------------------------------------------
+void ConfigureTimers()
+{
+    volatile u32 *ptr = (u32 *)XPAR_AXI_TIMER_0_BASEADDR;
+
+    // Stop/clear both timers first
+    ptr[TCSR0_INDEX] = 0x0;
+    ptr[TCSR1_INDEX] = 0x0;
+
+    // Down-count periodic mode:
+    // load value should be number_of_ticks - 2
+    u32 timer0_load = (1 * TIMER_CLOCK_HZ) - 2;   // 1 second
+    u32 timer1_load = (2 * TIMER_CLOCK_HZ) - 2;   // 2 seconds
+
+    ptr[TLR0_INDEX] = timer0_load;
+    ptr[TLR1_INDEX] = timer1_load;
+
+    // Put timers in:
+    // down count + auto reload + interrupt enabled + load
+    ptr[TCSR0_INDEX] = XTC_CSR_UDT_MASK | XTC_CSR_ARHT_MASK |
+                       XTC_CSR_ENIT_MASK | XTC_CSR_LOAD_MASK;
+
+    ptr[TCSR1_INDEX] = XTC_CSR_UDT_MASK | XTC_CSR_ARHT_MASK |
+                       XTC_CSR_ENIT_MASK | XTC_CSR_LOAD_MASK;
+
+    // Clear LOAD bit and start timers
+    ptr[TCSR0_INDEX] = XTC_CSR_UDT_MASK | XTC_CSR_ARHT_MASK |
+                       XTC_CSR_ENIT_MASK | XTC_CSR_ENT_MASK;
+
+    ptr[TCSR1_INDEX] = XTC_CSR_UDT_MASK | XTC_CSR_ARHT_MASK |
+                       XTC_CSR_ENIT_MASK | XTC_CSR_ENT_MASK;
+}
+
+// ------------------------------------------------------------
+// Main
+// ------------------------------------------------------------
+int main()
+{
+    cout << "Application starts" << endl;
+
+    int Status;
+
+    // Optional driver initialization
+    Status = XTmrCtr_Initialize(&TimerInstancePtr, XPAR_AXI_TIMER_0_DEVICE_ID);
+    if (Status != XST_SUCCESS)
+    {
+        cout << "TIMER INIT FAILED" << endl;
+        return 1;
+    }
+
+    // Initialize interrupt controller
+    Status = ScuGicInterrupt_Init(XPAR_PS7_SCUGIC_0_DEVICE_ID);
+    if (Status != XST_SUCCESS)
+    {
+        cout << "SCUGIC INIT FAILED" << endl;
+        return 1;
+    }
+
+    cout << "t = 0s : Program started" << endl;
+    cout << "Timer 0 period = 1 second" << endl;
+    cout << "Timer 1 period = 2 seconds" << endl;
+    cout << "Press any key to start..." << endl;
+
+    char input;
+    cin >> input;
+
+    ConfigureTimers();
+
+    cout << "Timers started. Waiting for interrupts..." << endl;
+
+    while (1)
+    {
+        // wait forever, interrupts will print to terminal
+    }
+
+    return 0;
+}

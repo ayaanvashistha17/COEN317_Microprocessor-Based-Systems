@@ -1,0 +1,111 @@
+#include "xparameters.h"
+#include "xil_types.h"
+#include "xil_io.h"
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    volatile u32* Timer_Ptr = (u32*) XPAR_TMRCTR_0_BASEADDR;
+
+    double period_s;
+    double duty_percent;
+    double high_time_s;
+
+    const double CLOCK_FREQ = 50000000.0; // 50 MHz
+
+    cout << "==== COEN 317 Lab 3 Part 3: PWM Mode ====" << endl;
+
+    while (1)
+    {
+        cout << "\nEnter PWM period in seconds (>0): ";
+        cin >> period_s;
+
+        cout << "Enter duty cycle in percent (0 to 100): ";
+        cin >> duty_percent;
+
+        if (period_s <= 0.0 || duty_percent < 0.0 || duty_percent > 100.0)
+        {
+            cout << "Invalid input. Try again." << endl;
+            continue;
+        }
+
+        high_time_s = period_s * (duty_percent / 100.0);
+
+        u32 tlr0 = (u32)(period_s * CLOCK_FREQ) - 2;     // Timer0 period
+        u32 tlr1 = (u32)(high_time_s * CLOCK_FREQ) - 2;  // Timer1 high time
+
+        cout << "TLR0 (period)    = " << tlr0 << endl;
+        cout << "TLR1 (high time) = " << tlr1 << endl;
+
+        // Stop both timers first
+        *(Timer_Ptr + 0) = 0x000;  // TCSR0
+        *(Timer_Ptr + 4) = 0x000;  // TCSR1 (offset 0x10 -> +4 words)
+
+        // Load period and high-time registers
+        *(Timer_Ptr + 1) = tlr0;   // TLR0
+        *(Timer_Ptr + 5) = tlr1;   // TLR1
+
+        // Load values into counters
+        *(Timer_Ptr + 0) = 0x20;   // load Timer0
+        *(Timer_Ptr + 4) = 0x20;   // load Timer1
+
+        // Clear load bit
+        *(Timer_Ptr + 0) = 0x00;
+        *(Timer_Ptr + 4) = 0x00;
+
+        // Enable PWM operation
+        // These values may vary slightly depending on exact timer configuration,
+        // but this is the direct-register style typically used for the lab.
+        *(Timer_Ptr + 0) = 0x000000E6; // Timer0: enable, auto-reload, down-count, PWM
+        *(Timer_Ptr + 4) = 0x000000E6; // Timer1: enable, auto-reload, down-count, PWM
+
+        cout << "PWM updated. LED should now reflect new period/duty cycle." << endl;
+    }
+
+    return 0;
+}
+
+
+
+
+//#include "xparameters.h"
+//#include "xil_types.h"
+//#include "xil_io.h"
+//#include <iostream>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    volatile u32* Timer_Ptr = (u32*) XPAR_TMRCTR_0_BASEADDR;
+//
+//    const u32 tlr0 = 99999998; // 2s * 50MHz - 2
+//    const u32 tlr1 = 49999998; // 1s * 50MHz - 2
+//
+//    cout << "==== COEN 317 Lab 3 Part 3: Fixed PWM Test ====" << endl;
+//
+//    *(Timer_Ptr + 0) = 0x000;
+//    *(Timer_Ptr + 4) = 0x000;
+//
+//    *(Timer_Ptr + 1) = tlr0;
+//    *(Timer_Ptr + 5) = tlr1;
+//
+//    *(Timer_Ptr + 0) = 0x20;
+//    *(Timer_Ptr + 4) = 0x20;
+//
+//    *(Timer_Ptr + 0) = 0x00;
+//    *(Timer_Ptr + 4) = 0x00;
+//
+//    *(Timer_Ptr + 0) = 0xE6;
+//    *(Timer_Ptr + 4) = 0xE6;
+//
+//    cout << "Fixed PWM running on LED." << endl;
+//
+//    while (1)
+//    {
+//    }
+//
+//    return 0;
+//}

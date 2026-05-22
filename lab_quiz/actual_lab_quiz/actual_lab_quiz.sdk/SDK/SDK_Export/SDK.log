@@ -1,0 +1,12 @@
+16:11:58.907 INFO  - Processing command line option -hwspec /nfs/home/a/ay_vashi/COEN_317/lab_quiz/actual_lab_quiz/actual_lab_quiz.sdk/SDK/SDK_Export/hw/system.xml. 
+16:13:24.978 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:13:25.078 INFO  - PS initialization will be done as it is not done before. 
+16:13:25.078 INFO  - Running PS initialization.... 
+16:13:25.476 INFO  - ps7_init is completed. 
+16:13:25.576 INFO  - ps7_post_config is completed. 
+16:13:25.676 INFO  - PS Initialization is complete. 
+16:24:00.491 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+16:24:00.496 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

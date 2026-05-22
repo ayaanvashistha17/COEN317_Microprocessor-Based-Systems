@@ -1,0 +1,10 @@
+NET input<0> LOC = W6;
+NET input<1> LOC = W7;
+
+NET output<0> LOC = E15;
+NET output<1> LOC = D15;
+
+NET input[*] IOSTANDARD = LVCMOS25;
+NET output[*] IOSTANDARD = LVCMOS25;
+
+

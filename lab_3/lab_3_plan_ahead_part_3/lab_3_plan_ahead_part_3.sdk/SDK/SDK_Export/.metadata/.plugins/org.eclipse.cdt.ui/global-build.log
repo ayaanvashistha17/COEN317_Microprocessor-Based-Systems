@@ -1,0 +1,219 @@
+16:18:17 **** Build of project lab3_part_3_bsp ****
+make -k all 
+libgen -hw ../system_2_hw_platform/system.xml\
+       \
+       -pe ps7_cortexa9_0 \
+       -log libgen.log \
+       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_2_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'gmake -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'gmake -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+Compiling common
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+Compiling standalone
+Compiling tmrctr
+Compiling canps
+Compiling devcfg
+Compiling dmaps
+Compiling emacps
+Compiling gpiops
+Compiling iicps
+Compiling qspips
+Compiling scugic
+Compiling scutimer
+Compiling scuwdt
+Compiling ttcps
+Compiling uartps
+Compiling usbps
+Compiling wdtps
+Compiling xadcps
+Compiling cpu_cortexa9
+Running execs_generate.
+Finished building libraries
+16:18:44 **** Build of configuration Debug for project lab3_part_3 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab3_part_3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab3_part_3.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab3_part_3_bsp/ps7_cortexa9_0/lib -o "lab3_part_3.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab3_part_3.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab3_part_3.elf  |tee "lab3_part_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19548	   1096	  29788	  50432	   c500	lab3_part_3.elf
+Finished building: lab3_part_3.elf.size
+ 
+16:19:59 **** Auto Build of configuration Debug for project lab3_part_3 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab3_part_3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab3_part_3.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab3_part_3_bsp/ps7_cortexa9_0/lib -o "lab3_part_3.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab3_part_3.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab3_part_3.elf  |tee "lab3_part_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 467316	   2540	  38848	 508704	  7c320	lab3_part_3.elf
+Finished building: lab3_part_3.elf.size
+ 
+16:24:58 **** Incremental Build of configuration Debug for project lab3_part_3 ****
+make all 
+make: Nothing to be done for 'all'.
+16:28:21 **** Auto Build of configuration Debug for project lab3_part_3 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab3_part_3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab3_part_3.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab3_part_3_bsp/ps7_cortexa9_0/lib -o "lab3_part_3.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab3_part_3.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab3_part_3.elf  |tee "lab3_part_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 467460	   2540	  38856	 508856	  7c3b8	lab3_part_3.elf
+Finished building: lab3_part_3.elf.size
+ 
+16:28:48 **** Incremental Build of configuration Debug for project lab3_part_3 ****
+make all 
+make: Nothing to be done for 'all'.
+16:29:31 **** Incremental Build of configuration Debug for project lab3_part_3 ****
+make all 
+make: Nothing to be done for 'all'.
+16:30:28 **** Auto Build of configuration Debug for project lab3_part_3 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab3_part_3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab3_part_3.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab3_part_3_bsp/ps7_cortexa9_0/lib -o "lab3_part_3.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab3_part_3.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab3_part_3.elf  |tee "lab3_part_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 467316	   2540	  38848	 508704	  7c320	lab3_part_3.elf
+Finished building: lab3_part_3.elf.size
+ 
+16:30:34 **** Auto Build of configuration Debug for project lab3_part_3 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab3_part_3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab3_part_3.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab3_part_3_bsp/ps7_cortexa9_0/lib -o "lab3_part_3.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab3_part_3.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab3_part_3.elf  |tee "lab3_part_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 467316	   2540	  38848	 508704	  7c320	lab3_part_3.elf
+Finished building: lab3_part_3.elf.size
+ 
+16:30:43 **** Incremental Build of configuration Debug for project lab3_part_3 ****
+make all 
+make: Nothing to be done for 'all'.
+16:35:48 **** Auto Build of configuration Debug for project lab3_part_3 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab3_part_3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab3_part_3.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab3_part_3_bsp/ps7_cortexa9_0/lib -o "lab3_part_3.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab3_part_3.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab3_part_3.elf  |tee "lab3_part_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 466996	   2540	  38848	 508384	  7c1e0	lab3_part_3.elf
+Finished building: lab3_part_3.elf.size
+ 
+16:35:56 **** Incremental Build of configuration Debug for project lab3_part_3 ****
+make all 
+make: Nothing to be done for 'all'.
+16:37:45 **** Incremental Build of configuration Debug for project lab3_part_3 ****
+make all 
+make: Nothing to be done for 'all'.
+16:38:15 **** Incremental Build of configuration Debug for project lab3_part_3 ****
+make all 
+make: Nothing to be done for 'all'.
+16:38:53 **** Auto Build of configuration Debug for project lab3_part_3 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab3_part_3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab3_part_3.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab3_part_3_bsp/ps7_cortexa9_0/lib -o "lab3_part_3.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab3_part_3.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab3_part_3.elf  |tee "lab3_part_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 466996	   2540	  38848	 508384	  7c1e0	lab3_part_3.elf
+Finished building: lab3_part_3.elf.size
+ 
+16:38:55 **** Incremental Build of configuration Debug for project lab3_part_3 ****
+make all 
+make: Nothing to be done for 'all'.
+16:39:40 **** Auto Build of configuration Debug for project lab3_part_3 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab3_part_3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab3_part_3.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab3_part_3_bsp/ps7_cortexa9_0/lib -o "lab3_part_3.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab3_part_3.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab3_part_3.elf  |tee "lab3_part_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 466996	   2540	  38848	 508384	  7c1e0	lab3_part_3.elf
+Finished building: lab3_part_3.elf.size
+ 
+16:39:41 **** Incremental Build of configuration Debug for project lab3_part_3 ****
+make all 
+make: Nothing to be done for 'all'.

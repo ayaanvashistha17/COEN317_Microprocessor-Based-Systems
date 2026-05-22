@@ -1,0 +1,470 @@
+16:05:36 **** Build of project lab_4_part_1_code_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+       \
+       -pe ps7_cortexa9_0 \
+       -log libgen.log \
+       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'gmake -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'gmake -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+Compiling common
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+Compiling standalone
+Compiling tmrctr
+Compiling canps
+Compiling devcfg
+Compiling dmaps
+Compiling emacps
+Compiling gpiops
+Compiling iicps
+Compiling qspips
+Compiling scugic
+Compiling scutimer
+Compiling scuwdt
+Compiling ttcps
+Compiling uartps
+Compiling usbps
+Compiling wdtps
+Compiling xadcps
+Compiling cpu_cortexa9
+Running execs_generate.
+Finished building libraries
+16:06:04 **** Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19548	   1096	  29788	  50432	   c500	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+16:06:10 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473200	   3324	  38920	 515444	  7dd74	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+16:06:49 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:24:43 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473344	   3332	  38920	 515596	  7de0c	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+16:24:57 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:31:38 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473288	   3332	  38920	 515540	  7ddd4	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+16:31:53 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:33:11 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473344	   3332	  38920	 515596	  7de0c	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+16:33:16 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:34:06 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473288	   3332	  38920	 515540	  7ddd4	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+16:34:13 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:36:32 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473344	   3332	  38920	 515596	  7de0c	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+16:36:36 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:37:08 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:39:22 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473344	   3332	  38920	 515596	  7de0c	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+16:40:10 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473656	   3324	  38920	 515900	  7df3c	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+16:40:13 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:45:26 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473708	   3324	  38912	 515944	  7df68	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+16:45:39 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:48:00 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:51:36 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 474256	   3332	  38920	 516508	  7e19c	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+16:51:44 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:52:10 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:55:59 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:56:18 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:58:08 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+16:59:04 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 474312	   3332	  38920	 516564	  7e1d4	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+16:59:12 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 474216	   3332	  38920	 516468	  7e174	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+16:59:15 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 474200	   3332	  38920	 516452	  7e164	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+16:59:23 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473872	   3332	  38920	 516124	  7e01c	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+17:00:03 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473872	   3332	  38920	 516124	  7e01c	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+17:00:05 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+17:02:05 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:81:10: warning: unused variable 'input' [-Wunused-variable]
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473064	   3332	  38912	 515308	  7dcec	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+17:02:12 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:81:10: warning: unused variable 'input' [-Wunused-variable]
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473088	   3332	  38912	 515332	  7dd04	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+17:02:22 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:81:10: warning: unused variable 'input' [-Wunused-variable]
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473088	   3332	  38912	 515332	  7dd04	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+17:02:27 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.
+17:02:47 **** Auto Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_code_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:81:10: warning: unused variable 'input' [-Wunused-variable]
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1_code.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_code_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1_code.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1_code.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1_code.elf  |tee "lab_4_part_1_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 473088	   3332	  38912	 515332	  7dd04	lab_4_part_1_code.elf
+Finished building: lab_4_part_1_code.elf.size
+ 
+17:02:48 **** Incremental Build of configuration Debug for project lab_4_part_1_code ****
+make all 
+make: Nothing to be done for 'all'.

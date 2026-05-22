@@ -1,0 +1,18 @@
+
+Ted Obuchowicz
+March 8, 2023
+
+March 8, 2023
+
+When performing a re-design (i.e such as for Lab 3 and Lab 4, ), it is best
+to create a new PlanAhead project and then within this new PlanAhead
+project, within SDK create a new Application Project INSTEAD of simply
+creating a new SDK Application project within a previosly existing
+PlanAhead project. Doing the latter  has led to unexpected incorrect results
+withing the new SDK Application project which necessitate powering off the
+Zynq board and re-programming the new SDK application project (i.e the ELF file)
+to the Zynq board. 
+
+So, in summary, always create a complete new PlanAhead project for every design.
+
+

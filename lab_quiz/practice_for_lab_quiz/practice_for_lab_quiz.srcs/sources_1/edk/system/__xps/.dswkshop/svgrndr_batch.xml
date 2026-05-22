@@ -1,0 +1,14 @@
+
+<RENDERBATCH>
+
+  <RENDERIMG RASNAME="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.sdk/SDK/SDK_Export/hw/imgs/processing_system7_0.jpg" SVGNAME="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.sdk/SDK/SDK_Export/hw/imgs/processing_system7_0.svg" TMPSVGFN="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.srcs/sources_1/edk/system/__xps/.dswkshop/processing_system7_0.svg"/>
+
+  <RENDERIMG RASNAME="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.sdk/SDK/SDK_Export/hw/imgs/axi_timer_0.jpg" SVGNAME="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.sdk/SDK/SDK_Export/hw/imgs/axi_timer_0.svg" TMPSVGFN="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.srcs/sources_1/edk/system/__xps/.dswkshop/axi_timer_0.svg"/>
+
+  <RENDERIMG RASNAME="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.sdk/SDK/SDK_Export/hw/imgs/axi_interconnect_1.jpg" SVGNAME="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.sdk/SDK/SDK_Export/hw/imgs/axi_interconnect_1.svg" TMPSVGFN="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.srcs/sources_1/edk/system/__xps/.dswkshop/axi_interconnect_1.svg"/>
+
+  <RENDERIMG RASNAME="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.sdk/SDK/SDK_Export/hw/imgs/axi_gpio_for_output.jpg" SVGNAME="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.sdk/SDK/SDK_Export/hw/imgs/axi_gpio_for_output.svg" TMPSVGFN="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.srcs/sources_1/edk/system/__xps/.dswkshop/axi_gpio_for_output.svg"/>
+
+  <RENDERIMG RASNAME="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.sdk/SDK/SDK_Export/hw/imgs/system_blkd.jpg" SVGNAME="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.sdk/SDK/SDK_Export/hw/imgs/system_blkd.svg" TMPSVGFN="/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.srcs/sources_1/edk/system/__xps/.dswkshop/system_blkd.svg"/>
+
+</RENDERBATCH>

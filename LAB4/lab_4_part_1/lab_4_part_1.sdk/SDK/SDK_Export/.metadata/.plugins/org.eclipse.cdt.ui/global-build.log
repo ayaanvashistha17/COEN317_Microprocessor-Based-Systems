@@ -1,0 +1,193 @@
+15:16:14 **** Build of project lab_4_part_1_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+       \
+       -pe ps7_cortexa9_0 \
+       -log libgen.log \
+       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'gmake -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'gmake -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+Compiling standalone
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+Compiling canps
+Compiling devcfg
+Compiling dmaps
+Compiling emacps
+Compiling gpiops
+Compiling iicps
+Compiling qspips
+Compiling scugic
+Compiling scutimer
+Compiling scuwdt
+Compiling ttcps
+Compiling uartps
+Compiling usbps
+Compiling wdtps
+Compiling xadcps
+Compiling cpu_cortexa9
+Running execs_generate.
+Finished building libraries
+15:16:41 **** Build of configuration Debug for project lab_4_part_1 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: lab_4_part_1.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../lab_4_part_1_bsp/ps7_cortexa9_0/lib -o "lab_4_part_1.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: lab_4_part_1.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size lab_4_part_1.elf  |tee "lab_4_part_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19548	   1096	  29788	  50432	   c500	lab_4_part_1.elf
+Finished building: lab_4_part_1.elf.size
+ 
+15:17:28 **** Auto Build of configuration Debug for project lab_4_part_1 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:8:21: fatal error: xtmrctr.h: No such file or directory
+compilation terminated.
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:29:20 **** Auto Build of project lab_4_part_1_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+       \
+       -pe ps7_cortexa9_0 \
+       -log libgen.log \
+       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'gmake -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'gmake -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+Compiling standalone
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+Compiling canps
+Compiling devcfg
+Compiling dmaps
+Compiling emacps
+Compiling gpiops
+Compiling iicps
+Compiling qspips
+Compiling scugic
+Compiling scutimer
+Compiling scuwdt
+Compiling ttcps
+Compiling uartps
+Compiling usbps
+Compiling wdtps
+Compiling xadcps
+Compiling cpu_cortexa9
+Running execs_generate.
+Finished building libraries
+15:29:55 **** Clean-only build of configuration Debug for project lab_4_part_1 ****
+make clean 
+rm -rf ./src/main.o ./src/main.d lab_4_part_1.elf.size  lab_4_part_1.elf
+ 
+15:29:55 **** Auto Build of configuration Debug for project lab_4_part_1 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:8:21: fatal error: xtmrctr.h: No such file or directory
+compilation terminated.
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:30:16 **** Auto Build of configuration Debug for project lab_4_part_1 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:52:1: error: 'XTmrCtr' does not name a type
+../src/main.cc: In function 'void Timer_ISR(void*)':
+../src/main.cc:62:32: error: 'XPAR_AXI_TIMER_0_BASEADDR' was not declared in this scope
+../src/main.cc: In function 'void ConfigureTimers()':
+../src/main.cc:154:32: error: 'XPAR_AXI_TIMER_0_BASEADDR' was not declared in this scope
+../src/main.cc: In function 'int main()':
+../src/main.cc:194:34: error: 'TimerInstancePtr' was not declared in this scope
+../src/main.cc:194:52: error: 'XPAR_AXI_TIMER_0_DEVICE_ID' was not declared in this scope
+../src/main.cc:194:78: error: 'XTmrCtr_Initialize' was not declared in this scope
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:30:20 **** Auto Build of configuration Debug for project lab_4_part_1 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:8:21: fatal error: xtmrctr.h: No such file or directory
+compilation terminated.
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:38:24 **** Auto Build of configuration Debug for project lab_4_part_1 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:1:1: error: expected unqualified-id before numeric constant
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:38:44 **** Auto Build of configuration Debug for project lab_4_part_1 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:26:21: fatal error: xtmrctr.h: No such file or directory
+compilation terminated.
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:52:15 **** Auto Build of configuration Debug for project lab_4_part_1 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:39:1: error: 'XTmrCtr' does not name a type
+../src/main.cc:63:39: error: 'XTmrCtr' has not been declared
+../src/main.cc: In function 'int ScuGicInterrupt_Init(u16, int*)':
+../src/main.cc:98:31: error: 'XTmrCtr_InterruptHandler' was not declared in this scope
+../src/main.cc: In function 'int main()':
+../src/main.cc:124:39: error: 'TimerInstancePtr' was not declared in this scope
+../src/main.cc:124:57: error: 'XPAR_AXI_TIMER_0_DEVICE_ID' was not declared in this scope
+../src/main.cc:124:83: error: 'XTmrCtr_Initialize' was not declared in this scope
+../src/main.cc:147:41: error: 'XTmrCtr_Handler' was not declared in this scope
+../src/main.cc:147:98: error: 'XTmrCtr_SetHandler' was not declared in this scope
+../src/main.cc:153:44: error: 'XPAR_AXI_TIMER_0_BASEADDR' was not declared in this scope
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:52:26 **** Auto Build of configuration Debug for project lab_4_part_1 ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../lab_4_part_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:26:21: fatal error: xtmrctr.h: No such file or directory
+compilation terminated.
+make: *** [src/subdir.mk:23: src/main.o] Error 1

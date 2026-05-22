@@ -1,0 +1,9 @@
+/*
+ * Empty C++ Application
+ */
+# include <iostream>
+int main()
+{
+	cout<<"Hello world!! from Zynq PS" <<endl;
+	return 0;
+}

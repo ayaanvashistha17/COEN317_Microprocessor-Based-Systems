@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Thu Mar 12 17:18:39 2026
+# Process ID: 5438
+# Log file: /nfs/home/a/ay_vashi/COEN_317/lab_3/planAhead.log
+# Journal file: /nfs/home/a/ay_vashi/COEN_317/lab_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+open_project /nfs/home/a/ay_vashi/COEN_317/lab_3/lab_3_plan_ahead_part_2/lab_3_plan_ahead_part_2.ppr
+launch_impact 
+launch_impact 
+launch_impact 
+launch_impact 
+export_hardware [get_files /nfs/home/a/ay_vashi/COEN_317/lab_3/lab_3_plan_ahead_part_2/lab_3_plan_ahead_part_2.srcs/sources_1/edk/system_2_part_2_final/system_2_part_2_final.xmp]
+launch_sdk -workspace /nfs/home/a/ay_vashi/COEN_317/lab_3/lab_3_plan_ahead_part_2/lab_3_plan_ahead_part_2.sdk/SDK/SDK_Export -hwspec /nfs/home/a/ay_vashi/COEN_317/lab_3/lab_3_plan_ahead_part_2/lab_3_plan_ahead_part_2.sdk/SDK/SDK_Export/hw/system_2_part_2_final.xml

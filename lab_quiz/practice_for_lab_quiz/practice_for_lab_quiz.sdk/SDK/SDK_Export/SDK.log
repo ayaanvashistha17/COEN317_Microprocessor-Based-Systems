@@ -1,0 +1,43 @@
+18:31:34.852 INFO  - Processing command line option -hwspec /nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.sdk/SDK/SDK_Export/hw/system.xml. 
+18:33:29.436 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:33:29.536 INFO  - PS initialization will be done as it is not done before. 
+18:33:29.536 INFO  - Running PS initialization.... 
+18:33:29.947 INFO  - ps7_init is completed. 
+18:33:30.047 INFO  - ps7_post_config is completed. 
+18:33:30.147 INFO  - PS Initialization is complete. 
+18:39:14.294 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:39:14.394 INFO  - PS initialization will be done as it is not done before. 
+18:39:14.395 INFO  - Running PS initialization.... 
+18:39:14.800 INFO  - ps7_init is completed. 
+18:39:14.900 INFO  - ps7_post_config is completed. 
+18:39:15.000 INFO  - PS Initialization is complete. 
+18:40:17.618 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:40:27.012 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:40:27.227 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Failed to download ELF file
+
+
+    Cannot access JTAG-DP: invalid ACK value (0x00, expected=0x02)
+    Error Address = 0x00174000, Size = 0x00000004
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+18:40:45.042 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:40:45.142 INFO  - PS initialization will be done as it is not done before. 
+18:40:45.143 INFO  - Running PS initialization.... 
+18:40:45.541 INFO  - ps7_init is completed. 
+18:40:45.552 INFO  - ps7_post_config is completed. 
+18:40:45.653 INFO  - PS Initialization is complete. 
+18:42:07.329 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+18:42:34.963 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:42:35.063 INFO  - PS initialization will be done as it is not done before. 
+18:42:35.064 INFO  - Running PS initialization.... 
+18:42:35.457 INFO  - ps7_init is completed. 
+18:42:35.557 INFO  - ps7_post_config is completed. 
+18:42:35.657 INFO  - PS Initialization is complete. 
+18:47:20.256 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+18:47:20.263 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

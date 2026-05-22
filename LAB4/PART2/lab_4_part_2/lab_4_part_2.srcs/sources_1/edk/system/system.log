@@ -1,0 +1,228 @@
+=====================
+Opened log file
+=====================
+Created pcores directory
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.7 Build EDK_P.20131013
+
+Xilinx EDK 14.7 Build EDK_P.20131013
+
+Copied
+/nfs/sw_cmc/x86_64.EL7/tools/xilinx_14.7/14.7/ISE_DS/EDK/data/xflow/bitgen_zynq.
+ut to etc directory
+Copied file
+/nfs/sw_cmc/x86_64.EL7/tools/xilinx_14.7/14.7/ISE_DS/EDK/data/xflow/fast_runtime
+_zynq.opt to etc directory
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+
+Checking platform address map ...
+Created backup of etc/bitgen.ut to etc/bitgen.ut.virtex5
+Copied
+/nfs/sw_cmc/x86_64.EL7/tools/xilinx_14.7/14.7/ISE_DS/EDK/data/xflow/bitgen_zynq.
+ut to etc directory
+Created backup of etc/fast_runtime.opt to etc/fast_runtime.opt.virtex5
+Copied file
+/nfs/sw_cmc/x86_64.EL7/tools/xilinx_14.7/14.7/ISE_DS/EDK/data/xflow/fast_runtime
+_zynq.opt to etc directory
+No changes to be saved in MHS file
+Saved project XMP file
+Saved Make file
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Assigned Driver axicdma 2.03.a for instance axi_cdma_0
+axi_cdma_0 has been added to the project
+ERROR:EDK:4125 - IPNAME: axi_cdma, INSTANCE: axi_cdma_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_cdma, INSTANCE: axi_cdma_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_cdma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Assigned Driver generic 1.00.a for instance axi_interconnect_1
+Assigned Driver generic 1.00.a for instance axi_interconnect_2
+Address Map for Processor processing_system7_0
+Address Map for Processor processing_system7_0
+  (0x40200000-0x4020ffff) axi_cdma_0	axi_interconnect_2
+INFO:EDK - Create new axi_interconnect IP instance axi_interconnect_1
+INFO:EDK - Connect clock port S_AXI_HP0_ACLK to processing_system7_0_FCLK_CLK0
+INFO:EDK - Connect bus interface M_AXI to axi_interconnect_1
+INFO:EDK - Connect clock port m_axi_aclk to processing_system7_0_FCLK_CLK0
+INFO:EDK - Do connection by refering to bus interface of a processing_system7_0 in design
+INFO:EDK - Create new axi_interconnect IP instance axi_interconnect_2
+INFO:EDK - Connect clock port M_AXI_GP0_ACLK to processing_system7_0_FCLK_CLK0
+INFO:EDK - Connect bus interface S_AXI_LITE to axi_interconnect_2
+INFO:EDK - Connect clock port s_axi_lite_aclk to processing_system7_0_FCLK_CLK0
+INFO:EDK - Successfully did connection by refering to M_AXI_GP0 bus interface in processing_system7_0
+INFO:EDK - All master interface and control bus interface of instance:axi_cdma_0 connected sucessfully.INFO:EDK - External IO port grouping doneINFO:EDK - Generate address successfully
+INFO:EDK - Successfully finished auto bus connection for IP instance: axi_cdma_0
+Assigned Driver generic 1.00.a for instance axi_interconnect_0
+axi_interconnect_0 has been added to the project
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_0, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+Assigned Driver generic 1.00.a for instance axi_interconnect_0
+axi_interconnect_0 has been added to the project
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_0, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:4058 - INSTANCE: axi_cdma_0, BUS_INTERFACE: M_AXI -  is not connected to any slave. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+axi_interconnect_1 has been deleted from the project
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+Deleting Internal port processing_system7_0:FCLK_RESET0_N 
+Deleting Internal port axi_interconnect_2:INTERCONNECT_ARESETN 
+axi_interconnect_2 has been deleted from the project
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_cdma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Assigned Driver tmrctr 2.05.a for instance axi_timer_0
+axi_timer_0 has been added to the project
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_timer, INSTANCE: axi_timer_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_timer, INSTANCE: axi_timer_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_cdma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:2137 - Peripheral axi_timer_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Assigned Driver generic 1.00.a for instance axi_interconnect_1
+ERROR:EDK:3759 - AddresGen MHS Error Address Generator can not generate address map for your design. Please check if there is address conflict, clear the conflict and re-generate the address map.Please consult the online help for how to let Address Generator to overwrite the address. If Address Generator still can not generate the address map, please provide the address map manually.
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_cdma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_cdma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+INFO:EDK - Do connection by refering to bus interface of a processing_system7_0 in design
+INFO:EDK - Create new axi_interconnect IP instance axi_interconnect_1
+INFO:EDK - Connect bus interface S_AXI to axi_interconnect_1
+INFO:EDK - Connect clock port S_AXI_ACLK to processing_system7_0_FCLK_CLK0
+INFO:EDK - Successfully did connection by refering to M_AXI_GP0 bus interface in processing_system7_0
+INFO:EDK - External IO port grouping doneWARNING:EDK - Generate address failed during auto bus connection
+INFO:EDK - Successfully finished auto bus connection for IP instance: axi_timer_0, however there is problem when generating address, please generate address manually
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:4058 - INSTANCE: processing_system7_0, BUS_INTERFACE: M_AXI_GP1 -  is not connected to any slave. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_cdma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_cdma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:4058 - INSTANCE: processing_system7_0, BUS_INTERFACE: M_AXI_GP1 -  is not connected to any slave. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_cdma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:4058 - INSTANCE: processing_system7_0, BUS_INTERFACE: M_AXI_GP1 -  is not connected to any slave. 
+WARNING:EDK:4058 - INSTANCE: axi_cdma_0, BUS_INTERFACE: M_AXI -  is not connected to any slave. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:2137 - Peripheral axi_cdma_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:4058 - INSTANCE: axi_cdma_0, BUS_INTERFACE: M_AXI -  is not connected to any slave. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK - INST:axi_cdma_0 BASEADDR-HIGHADDR:0x40200000-0x4020ffff - is out of addressable range for INST:processing_system7_0 BUSIF:M_AXI_GP1, it should be in range BASEADDR-HIGHADDR:0x80000000-0xbfffffff ! 
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:4058 - INSTANCE: axi_cdma_0, BUS_INTERFACE: M_AXI -  is not connected to any slave. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK - INST:axi_cdma_0 BASEADDR-HIGHADDR:0x40200000-0x4020ffff - is out of addressable range for INST:processing_system7_0 BUSIF:M_AXI_GP1, it should be in range BASEADDR-HIGHADDR:0x80000000-0xbfffffff ! 
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK - INST:axi_cdma_0 BASEADDR-HIGHADDR:0x40200000-0x4020ffff - is out of addressable range for INST:processing_system7_0 BUSIF:M_AXI_GP1, it should be in range BASEADDR-HIGHADDR:0x80000000-0xbfffffff ! 
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK - INST:axi_cdma_0 BASEADDR-HIGHADDR:0x40200000-0x4020ffff - is out of addressable range for INST:processing_system7_0 BUSIF:M_AXI_GP1, it should be in range BASEADDR-HIGHADDR:0x80000000-0xbfffffff ! 
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK - INST:axi_cdma_0 BASEADDR-HIGHADDR:0x40200000-0x4020ffff - is out of addressable range for INST:processing_system7_0 BUSIF:M_AXI_GP1, it should be in range BASEADDR-HIGHADDR:0x80000000-0xbfffffff ! 
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK - INST:axi_cdma_0 BASEADDR-HIGHADDR:0x40200000-0x4020ffff - is out of addressable range for INST:processing_system7_0 BUSIF:M_AXI_GP1, it should be in range BASEADDR-HIGHADDR:0x80000000-0xbfffffff ! 
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK - INST:axi_cdma_0 BASEADDR-HIGHADDR:0x40200000-0x4020ffff - is out of addressable range for INST:processing_system7_0 BUSIF:M_AXI_GP1, it should be in range BASEADDR-HIGHADDR:0x80000000-0xbfffffff ! 
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+ERROR:EDK - INST:axi_cdma_0 BASEADDR-HIGHADDR:0x40200000-0x4020ffff - is out of addressable range for INST:processing_system7_0 BUSIF:M_AXI_GP1, it should be in range BASEADDR-HIGHADDR:0x80000000-0xbfffffff ! 
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+ERROR:EDK - INST:axi_cdma_0 BASEADDR-HIGHADDR:0x40200000-0x4020ffff - is out of addressable range for INST:processing_system7_0 BUSIF:M_AXI_GP1, it should be in range BASEADDR-HIGHADDR:0x80000000-0xbfffffff ! 
+
+Running DRCs...
+
+Overriding IP level properties ...
+WARNING:EDK:3967 - axi_timer (axi_timer_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/system.mhs line 144 
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor processing_system7_0
+  (0x40200000-0x4020ffff) axi_cdma_0	axi_interconnect_gp1
+
+Checking platform address map ...
+ERROR:EDK - INST:axi_cdma_0 BASEADDR-HIGHADDR:0x40200000-0x4020ffff - is out of addressable range for INST:processing_system7_0 BUSIF:M_AXI_GP1, it should be in range BASEADDR-HIGHADDR:0x80000000-0xbfffffff ! 
+ERROR:EDK:3830 - CLK M_AXI_GP1_ACLK on INSTANCE processing_system7_0 is not connected. All AXI master/slaves are required to be clocked.
+ERROR:EDK:3830 - CLK S_AXI_HP2_ACLK on INSTANCE processing_system7_0 is not connected. All AXI master/slaves are required to be clocked.
+
+Checking platform configuration ...
+IPNAME: axi_interconnect, INSTANCE: axi_interconnect_gp1 - 1 master(s) : 1 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi_interconnect_hp - 1 master(s) : 2 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 - 1 master(s) : 1 slave(s) 
+Writing filter settings....
+Done writing filter settings to:
+	/nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/etc/system.filters
+Done writing Tab View settings to:
+	/nfs/home/a/ay_vashi/COEN_317/LAB4/PART2/lab_4_part_2/lab_4_part_2.srcs/sources_1/edk/system/etc/system.gui

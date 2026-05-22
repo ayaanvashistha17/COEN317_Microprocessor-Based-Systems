@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.runs/impl_1/system_stub_routed.ncd
+OUTFILE=/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.runs/impl_1/system_stub.bit
+FAMILY=Zynq
+PART=xc7z020-1clg484
+WORKINGDIR=/nfs/home/a/ay_vashi/COEN_317/lab_quiz/practice_for_lab_quiz/practice_for_lab_quiz.runs/impl_1
+LICENSE=ISE
+USER_INFO=174208431_1777582641_210797993_828

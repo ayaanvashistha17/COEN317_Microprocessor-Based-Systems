@@ -1,0 +1,409 @@
+///*
+// * Copyright (c) 2009 Xilinx, Inc.  All rights reserved.
+// *
+// * Xilinx, Inc.
+// * XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS" AS A
+// * COURTESY TO YOU.  BY PROVIDING THIS DESIGN, CODE, OR INFORMATION AS
+// * ONE POSSIBLE   IMPLEMENTATION OF THIS FEATURE, APPLICATION OR
+// * STANDARD, XILINX IS MAKING NO REPRESENTATION THAT THIS IMPLEMENTATION
+// * IS FREE FROM ANY CLAIMS OF INFRINGEMENT, AND YOU ARE RESPONSIBLE
+// * FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE FOR YOUR IMPLEMENTATION.
+// * XILINX EXPRESSLY DISCLAIMS ANY WARRANTY WHATSOEVER WITH RESPECT TO
+// * THE ADEQUACY OF THE IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO
+// * ANY WARRANTIES OR REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE
+// * FROM CLAIMS OF INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY
+// * AND FITNESS FOR A PARTICULAR PURPOSE.
+// *
+// */
+//
+//#include <iostream>
+//using namespace std;
+//
+//
+//#include "xparameters.h"
+//#include "xil_types.h"
+//
+//#include "xtmrctr.h"
+//#include "xil_io.h"
+//#include "xil_exception.h"
+//#include "xscugic.h"
+//#include <stdio.h>
+//
+///* Instance of the Interrupt Controller */
+//XScuGic InterruptController;
+//
+///* The configuration parameters of the controller */
+//static XScuGic_Config *GicConfig;
+//
+//// Timer Instance
+//XTmrCtr TimerInstancePtr;
+//
+//int test = 0;
+//
+//void Timer_InterruptHandler(void)
+//{
+//        cout << "I am the interrupt handler" << endl;
+//}
+//
+//int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr)
+//{
+//	/*
+//	* Connect the interrupt controller interrupt handler to the hardware
+//	* interrupt handling logic in the ARM processor.
+//	*/
+//	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+//	(Xil_ExceptionHandler) XScuGic_InterruptHandler,
+//	XScuGicInstancePtr);
+//	/*
+//	* Enable interrupts in the ARM
+//	*/
+//	Xil_ExceptionEnable();
+//	return XST_SUCCESS;
+//}
+//
+//int ScuGicInterrupt_Init(u16 DeviceId,XTmrCtr *TimerInstancePtr)
+//{
+//	int Status;
+//	/*
+//	* Initialize the interrupt controller driver so that it is ready to
+//	* use.
+//	* */
+//
+//	GicConfig = XScuGic_LookupConfig(DeviceId);
+//	if (NULL == GicConfig)
+//	{
+//		return XST_FAILURE;
+//	}
+//	Status = XScuGic_CfgInitialize(&InterruptController, GicConfig,
+//	GicConfig->CpuBaseAddress);
+//
+//	if (Status != XST_SUCCESS)
+//	{
+//		return XST_FAILURE;
+//	}
+//	/*
+//	* Setup the Interrupt System
+//	* */
+//	Status = SetUpInterruptSystem(&InterruptController);
+//	if (Status != XST_SUCCESS)
+//	{
+//		return XST_FAILURE;
+//	}
+//
+//	// add this line to fix the interrupt only running once
+//        // Nov. 15, 2017
+//        // solution found by Anthony Fiorito on Xilinx Forum
+//
+//
+//	XScuGic_CPUWriteReg(&InterruptController, XSCUGIC_EOI_OFFSET, XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR);
+//
+//	/*
+//	* Connect a device driver handler that will be called when an
+//	* interrupt for the device occurs, the device driver handler performs
+//	* the specific interrupt processing for the device
+//	*/
+//	Status = XScuGic_Connect(&InterruptController,
+//							 XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR,
+//							 (Xil_ExceptionHandler)XTmrCtr_InterruptHandler,
+//							 (void *)TimerInstancePtr);
+//
+//	if (Status != XST_SUCCESS)
+//	{
+//		return XST_FAILURE;
+//	}
+//	/*
+//	* Enable the interrupt for the device and then cause (simulate) an
+//	* interrupt so the handlers will be called
+//	*/
+//	XScuGic_Enable(&InterruptController, XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR);
+//
+//	return XST_SUCCESS;
+//}
+//
+//
+//int main()
+//{
+//    cout << "Application starts " << endl;
+//    int xStatus;
+//
+//
+//        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//        //Step-1 :AXI Timer Initialization
+//        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//        xStatus = XTmrCtr_Initialize(&TimerInstancePtr, XPAR_AXI_TIMER_0_DEVICE_ID);
+//        if(XST_SUCCESS != xStatus)
+//        {
+//                cout << "TIMER INIT FAILED " << endl;
+//                if(xStatus == XST_DEVICE_IS_STARTED)
+//                {
+//                        cout << "TIMER has already started" << endl;
+//                        cout << "Please power cycle your board, and re-program the bitstream" << endl;
+//                }
+//                return 1;
+//        }
+//
+//
+//
+//
+//
+//	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	//Step-2 :Set Timer Handler
+//	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//        //
+//        // cast second argument to data type XTmrCtr_Handler since in gcc it gave a warning
+//        // and with g++ for the C++ version it resulted in an error
+//
+//	XTmrCtr_SetHandler(&TimerInstancePtr, (XTmrCtr_Handler)Timer_InterruptHandler, &TimerInstancePtr);
+//
+//
+//
+//      // intialize time pointer with value from xparameters.h file
+//
+// unsigned int* timer_ptr = (unsigned int* )XPAR_AXI_TIMER_0_BASEADDR;
+//
+//         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//        //Step-3 :load the reset value
+//        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//       *(timer_ptr+ 1) = 0xffffff00;
+//
+//
+//
+//         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//         //Step-4 : set the timer options
+//         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//         // from xparameters.h file #define XPAR_AXI_TIMER_0_BASEADDR 0x42800000
+//         //  Configure timer in generate mode, count up, interrupt enabled
+//         //  with autoreload of load register
+//
+//       *(timer_ptr)  = 0x0f4 ;
+//
+//
+//
+//
+//
+//
+//
+//	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	//Step-5 : SCUGIC interrupt controller Initialization
+//	//Registration of the Timer ISR
+//	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	xStatus=
+//	ScuGicInterrupt_Init(XPAR_PS7_SCUGIC_0_DEVICE_ID, &TimerInstancePtr);
+//	if(XST_SUCCESS != xStatus)
+//	{
+//		cout << " :( SCUGIC INIT FAILED )" << endl;
+//		return 1;
+//	}
+//
+//
+//
+//
+//       // Beginning of our main code
+//
+//
+//	//We want to control when the timer starts
+//	char input;
+//	cout << "Press any key to start the timer" << endl;
+//	cin >> input ;
+//	cout << "You pressed "<<  input << endl;
+//    cout << "Enabling the timer to start" << endl;
+//
+//        *(timer_ptr) = 0x0d4 ;   // deassert the load 5 to allow the timer to start counting
+//
+//        // let timer run forever generating periodic interrupts
+//
+//	while( 1)
+//        {
+//          //  // wait forever and let the timer generate periodic interrupts
+//        }
+//
+//
+//    return 0;
+//}
+
+
+#include <iostream>
+using namespace std;
+
+#include "xparameters.h"
+#include "xil_types.h"
+#include "xtmrctr.h"
+#include "xil_io.h"
+#include "xil_exception.h"
+#include "xscugic.h"
+#include "xstatus.h"
+
+/* Interrupt Controller instance */
+XScuGic InterruptController;
+static XScuGic_Config *GicConfig;
+
+/* Timer instance */
+XTmrCtr TimerInstancePtr;
+
+/* Global second counter */
+volatile int sec_count = 0;
+
+/* Pointer to AXI Timer base address */
+volatile u32* timer_ptr = (u32*) XPAR_AXI_TIMER_0_BASEADDR;
+
+/*
+   Register map for Timer 0:
+   timer_ptr + 0  -> TCSR0
+   timer_ptr + 1  -> TLR0
+   timer_ptr + 2  -> TCR0
+
+   Register map for Timer 1:
+   timer_ptr + 4  -> TCSR1
+   timer_ptr + 5  -> TLR1
+   timer_ptr + 6  -> TCR1
+*/
+
+/* User interrupt callback */
+void Timer_InterruptHandler(void)
+{
+    // Check if Timer 0 caused the interrupt by testing TINT = bit 8
+    if ( (*(timer_ptr)) & (1 << 8) )
+    {
+        sec_count++;
+        cout << "t = " << sec_count << " s" << endl;
+
+        // Clear Timer 0 interrupt by writing 1 to bit 8
+        *(timer_ptr) |= (1 << 8);
+    }
+
+    // Optional: if you ever enable Timer 1 too, this is the idea
+    /*
+    if ( (*(timer_ptr + 4)) & (1 << 8) )
+    {
+        cout << "Timer 1 interrupt occurred" << endl;
+        *(timer_ptr + 4) |= (1 << 8);
+    }
+    */
+}
+
+int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr)
+{
+    Xil_ExceptionInit();
+
+    Xil_ExceptionRegisterHandler(
+        XIL_EXCEPTION_ID_INT,
+        (Xil_ExceptionHandler) XScuGic_InterruptHandler,
+        XScuGicInstancePtr
+    );
+
+    Xil_ExceptionEnable();
+
+    return XST_SUCCESS;
+}
+
+int ScuGicInterrupt_Init(u16 DeviceId, XTmrCtr *TimerInstancePtr)
+{
+    int Status;
+
+    GicConfig = XScuGic_LookupConfig(DeviceId);
+    if (GicConfig == NULL)
+    {
+        return XST_FAILURE;
+    }
+
+    Status = XScuGic_CfgInitialize(
+        &InterruptController,
+        GicConfig,
+        GicConfig->CpuBaseAddress
+    );
+    if (Status != XST_SUCCESS)
+    {
+        return XST_FAILURE;
+    }
+
+    Status = SetUpInterruptSystem(&InterruptController);
+    if (Status != XST_SUCCESS)
+    {
+        return XST_FAILURE;
+    }
+
+    // Connect AXI Timer interrupt to the timer driver ISR
+    Status = XScuGic_Connect(
+        &InterruptController,
+        XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR,
+        (Xil_ExceptionHandler) XTmrCtr_InterruptHandler,
+        (void *) TimerInstancePtr
+    );
+    if (Status != XST_SUCCESS)
+    {
+        return XST_FAILURE;
+    }
+
+    XScuGic_Enable(&InterruptController, XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR);
+
+    return XST_SUCCESS;
+}
+
+int main()
+{
+    int xStatus;
+
+    cout << "Application starts" << endl;
+    cout << "t = 0 s" << endl;
+
+    // Step 1: Initialize AXI Timer
+    xStatus = XTmrCtr_Initialize(&TimerInstancePtr, XPAR_AXI_TIMER_0_DEVICE_ID);
+    if (xStatus != XST_SUCCESS)
+    {
+        cout << "TIMER INIT FAILED" << endl;
+        if (xStatus == XST_DEVICE_IS_STARTED)
+        {
+            cout << "Timer has already started" << endl;
+            cout << "Power cycle board and reprogram bitstream" << endl;
+        }
+        return 1;
+    }
+
+    // Step 2: Register user callback
+    XTmrCtr_SetHandler(
+        &TimerInstancePtr,
+        (XTmrCtr_Handler) Timer_InterruptHandler,
+        &TimerInstancePtr
+    );
+
+    // Step 3: Load reset value
+    // 0xFFFFFF00 gives fast rollover for easy demonstration
+    *(timer_ptr + 1) = 0xFFFFFF00;
+
+    // Step 4: Configure Timer 0
+    // 0x0F4 means:
+    // bit 7 = enable interrupt
+    // bit 6 = enable timer
+    // bit 5 = load
+    // bit 4 = auto reload
+    // bit 2 = down/up mode depending on lab setup
+    //
+    // This is the same style used in the lab examples.
+    *(timer_ptr) = 0x0F4;
+
+    // Step 5: Initialize interrupt controller
+    xStatus = ScuGicInterrupt_Init(XPAR_PS7_SCUGIC_0_DEVICE_ID, &TimerInstancePtr);
+    if (xStatus != XST_SUCCESS)
+    {
+        cout << "SCUGIC INIT FAILED" << endl;
+        return 1;
+    }
+
+    // Step 6: Start timer when user presses a key
+    char input;
+    cout << "Press any key to start the timer" << endl;
+    cin >> input;
+
+    cout << "You pressed " << input << endl;
+    cout << "Timer started" << endl;
+
+    // Deassert LOAD bit so timer begins counting
+    *(timer_ptr) = 0x0D4;
+
+    // Wait forever while interrupts occur
+    while (1)
+    {
+    }
+
+    return 0;
+}
